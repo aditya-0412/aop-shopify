@@ -1,0 +1,176 @@
+<section id="card-section">
+  <div class="container py-5">
+    <div class="row d-flex justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      {% for block in section.blocks %}
+        <!-- Card 1: Ignite Christian Academy -->
+        <div class="col">
+          <div class="card h-100">
+            <div
+              class="card-header-custom {{ block.settings.header_class }}"
+              style="background-image: url({{ block.settings.background_image | image_url }});"
+            >
+              <!-- Overlay div -->
+              <div class="card-header-overlay {{ block.settings.overlay_class }}"></div>
+              <!-- Logo and badges remain on top of the overlay -->
+              {% if block.settings.logo %}
+                <img
+                  width=""
+                  height=""
+                  src="{{ block.settings.logo | image_url }}"
+                  alt="{{ block.settings.logo_alt }}"
+                  class="img-fluid mb-3"
+                  style="max-width: 300px; z-index: 2; position: relative"
+                >
+              {% endif %}
+              <div class="card-badges mb-2">
+                {% if block.settings.badge1 != blank %}
+                  <span class="badge">
+                    {% if block.settings.badge1_icon != blank %}
+                      <i class="{{ block.settings.badge1_icon }} me-2"></i>
+                    {% endif %}
+                    {{ block.settings.badge1 }}
+                  </span>
+                {% endif %}
+                {% if block.settings.badge2 != blank %}
+                  <span class="badge">
+                    {{ block.settings.badge2 }}
+                  </span>
+                {% endif %}
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ block.settings.title }}</h5>
+              <p class="card-text">
+                {{ block.settings.text }}
+              </p>
+              <div class="card-buttons mt-auto">
+                {% if block.settings.button1_text != blank %}
+                  <a href="{{ block.settings.button1_link }}" class="btn btn-learn-more">
+                    {{ block.settings.button1_text }}
+                  </a>
+                {% endif %}
+                {% if block.settings.button2_text != blank %}
+                  <a href="{{ block.settings.button2_link }}" class="btn {{ block.settings.button2_class }}">
+                    {{ block.settings.button2_text }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Card Section",
+  "tag": "section",
+  "class": "custom-card-grid",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Card Background Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo Image"
+        },
+        {
+          "type": "text",
+          "id": "logo_alt",
+          "label": "Logo Alt Text",
+          "default": "Program Logo"
+        },
+        {
+          "type": "text",
+          "id": "header_class",
+          "label": "Header Class",
+          "default": "header-monarch"
+        },
+        {
+          "type": "text",
+          "id": "overlay_class",
+          "label": "Overlay Class",
+          "default": "monarch-overlay"
+        },
+        {
+          "type": "text",
+          "id": "badge1",
+          "label": "First Badge",
+          "default": "Online"
+        },
+        {
+          "type": "text",
+          "id": "badge1_icon",
+          "label": "First Badge Icon Class",
+          "default": "fas fa-desktop"
+        },
+        {
+          "type": "text",
+          "id": "badge2",
+          "label": "Second Badge",
+          "default": "Grades 3-12"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "Online, Parent-Supported"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Card Description",
+          "default": "Online Christian home learning curriculum with automated grading and record keeping."
+        },
+        {
+          "type": "text",
+          "id": "button1_text",
+          "label": "First Button Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button1_link",
+          "label": "First Button Link",
+          "default": "/"
+        },
+        {
+          "type": "text",
+          "id": "button2_text",
+          "label": "Second Button Text",
+          "default": "FREE TRIAL"
+        },
+        {
+          "type": "url",
+          "id": "button2_link",
+          "label": "Second Button Link",
+          "default": "/"
+        },
+        {
+          "type": "text",
+          "id": "button2_class",
+          "label": "Second Button CSS Class",
+          "default": "btn-custom-monarch"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card Section",
+      "category": "Custom",
+      "blocks": [{ "type": "card" }, { "type": "card" }, { "type": "card" }]
+    }
+  ]
+}
+{% endschema %}
