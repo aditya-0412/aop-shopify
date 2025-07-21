@@ -1,0 +1,47 @@
+<section id="logo-section" class="logo-section my-5">
+  <div class="container text-center mt-5 mb-5 fw-bold">
+    {{ section.settings.text }}
+  </div>
+  {% if section.settings.logo_image %}
+    <img
+      width=""
+      height=""
+      class="brands-logo mb-5"
+      src="{{ section.settings.logo_image | image_url }}"
+      alt="{{ section.settings.logo_alt }}"
+    >
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Logo Strip",
+  "tag": "section",
+  "class": "logo-strip-section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "AOP has been the leader in award-winning, Christian homeschooling for 45 years counting!"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo Strip Image"
+    },
+    {
+      "type": "text",
+      "id": "logo_alt",
+      "label": "Logo Image Alt Text",
+      "default": "Brands Logo"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo Strip",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

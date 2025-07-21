@@ -1,0 +1,158 @@
+<!-- Bottom Section: Moments of Connection & Home Learning Community -->
+<section id="text-media" class="section-bg-blue pb-5">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Left Video Block -->
+      <div class="col-lg-6">
+        <div class="video-wrapper-custom">
+          {% if section.settings.video_url != blank %}
+            <iframe
+              width="560"
+              height="315"
+              src="{{ section.settings.video_url }}"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Right Content Block -->
+      <div class="col-lg-6">
+        {% if section.settings.right_top_text != blank %}
+          <p class="text-uppercase-custom mb-2">{{ section.settings.right_top_text }}</p>
+        {% endif %}
+        {% if section.settings.right_heading != blank %}
+          <h2 class="heading-2-custom mb-3">{{ section.settings.right_heading }}</h2>
+        {% endif %}
+        {% if section.settings.right_paragraph != blank %}
+          <p class="paragraph-lg-custom mb-4">{{ section.settings.right_paragraph }}</p>
+        {% endif %}
+        {% if section.settings.right_button_text != blank %}
+          <a href="{{ section.settings.right_button_link }}" class="btn btn-primary-custom">
+            {{ section.settings.right_button_text }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bottom-section" class="bottom-section">
+  <div class="container-fluid py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 text-center">
+        {% if section.settings.bottom_heading != blank %}
+          <h1 class="display-5 fw-bold mb-4">{{ section.settings.bottom_heading }}</h1>
+        {% endif %}
+        {% if section.settings.bottom_paragraph != blank %}
+          <p class="fs-5 mb-5 mx-auto" style="max-width: 750px">
+            {{ section.settings.bottom_paragraph }}
+          </p>
+        {% endif %}
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+          {% if section.settings.bottom_button1_text != blank %}
+            <a href="{{ section.settings.bottom_button1_link }}" class="btn btn-bottom-section fw-bold">
+              {{ section.settings.bottom_button1_text }}
+            </a>
+          {% endif %}
+          {% if section.settings.bottom_button2_text != blank %}
+            <a href="{{ section.settings.bottom_button2_link }}" class="btn btn-bottom-section fw-bold">
+              {{ section.settings.bottom_button2_text }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Bottom Section",
+  "tag": "section",
+  "class": "text-media-bottom",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "YouTube Video URL",
+      "default": "https://www.youtube.com/embed/LD8pokENoLg"
+    },
+    {
+      "type": "text",
+      "id": "right_top_text",
+      "label": "Top Text (Right Block)",
+      "default": "Join the Home Learning Community"
+    },
+    {
+      "type": "text",
+      "id": "right_heading",
+      "label": "Heading (Right Block)",
+      "default": "Curious If Home Learning Is Right For You?"
+    },
+    {
+      "type": "textarea",
+      "id": "right_paragraph",
+      "label": "Paragraph (Right Block)",
+      "default": "Explore moments of connection with real AOP families to hear the highlights and obstacles from their home learning journeys or schedule a call with one of our friendly and helpful home-learning experts to get your questions answered!"
+    },
+    {
+      "type": "text",
+      "id": "right_button_text",
+      "label": "Button Text (Right Block)",
+      "default": "GET STARTED"
+    },
+    {
+      "type": "url",
+      "id": "right_button_link",
+      "label": "Button Link (Right Block)",
+      "default": "/"
+    },
+    {
+      "type": "text",
+      "id": "bottom_heading",
+      "label": "Bottom Heading",
+      "default": "Getting Started With Home Learning Is Easier Than You Think"
+    },
+    {
+      "type": "textarea",
+      "id": "bottom_paragraph",
+      "label": "Bottom Paragraph",
+      "default": "Browse curriculum and resources designed with home learners in mind and subscribe to receive home learning help to your inbox for support along the way."
+    },
+    {
+      "type": "text",
+      "id": "bottom_button1_text",
+      "label": "Bottom Button 1 Text",
+      "default": "DOWNLOAD CATALOG"
+    },
+    {
+      "type": "url",
+      "id": "bottom_button1_link",
+      "label": "Bottom Button 1 Link",
+      "default": "/"
+    },
+    {
+      "type": "text",
+      "id": "bottom_button2_text",
+      "label": "Bottom Button 2 Text",
+      "default": "SUBSCRIBE FOR HELPFUL TIPS"
+    },
+    {
+      "type": "url",
+      "id": "bottom_button2_link",
+      "label": "Bottom Button 2 Link",
+      "default": "/"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Media + Bottom CTA",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

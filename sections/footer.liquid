@@ -1,0 +1,188 @@
+<section id="footer-section">
+  <footer class="footer-section py-5">
+    <div class="container">
+      <div class="row">
+        {% for block in section.blocks %}
+          {% if block.type == 'link_column' %}
+            <div class="col-6 col-md-3 col-lg-2 mb-4">
+              <h6 class="text-uppercase mb-3">{{ block.settings.title }}</h6>
+              <ul class="list-unstyled">
+                {% for i in (1..4) %}
+                  {% assign label_key = 'link_label_' | append: i %}
+                  {% assign url_key = 'link_url_' | append: i %}
+                  {% assign link_label = block.settings[label_key] %}
+                  {% assign link_url = block.settings[url_key] %}
+                  {% if link_label != blank %}
+                    <li>
+                      <a href="{{ link_url }}" class="text-secondary text-decoration-none">{{ link_label }}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        <div class="col-12 col-lg-4 mb-4">
+          <h6 class="text-uppercase mb-3">{{ section.settings.about_title }}</h6>
+          <p class="text-secondary">{{ section.settings.about_text }}</p>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4">
+
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="bottom-custom-text mb-0">{{ section.settings.bottom_text }}</p>
+        </div>
+        <div class="col-12 col-md-6 text-center text-md-end">
+          {% for block in section.blocks %}
+            {% if block.type == 'social' %}
+              <a href="{{ block.settings.social_link }}" class="custom-icon text-decoration-none mx-2">
+                <i class="{{ block.settings.social_icon }}"></i>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="sticky-contact-widget mt-3">
+        <button class="btn btn-lg">{{ section.settings.sticky_button_label }}</button>
+      </div>
+    </div>
+  </footer>
+</section>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "about_title",
+      "label": "About Title",
+      "default": "About AOP Lorem Ipsum"
+    },
+    {
+      "type": "textarea",
+      "id": "about_text",
+      "label": "About Text",
+      "default": "The latest homeschool news, articles, and resources, sent to your inbox weekly."
+    },
+    {
+      "type": "text",
+      "id": "bottom_text",
+      "label": "Bottom Footer Text",
+      "default": "Eget consectetur nunc turpis risus. Links."
+    },
+    {
+      "type": "text",
+      "id": "sticky_button_label",
+      "label": "Sticky Button Label",
+      "default": "Sticky Contact Widget"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_column",
+      "name": "Link Column",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Column Title",
+          "default": "Solutions"
+        },
+        {
+          "type": "text",
+          "id": "link_label_1",
+          "label": "Link Label 1",
+          "default": "Marketing"
+        },
+        {
+          "type": "url",
+          "id": "link_url_1",
+          "label": "Link URL 1",
+          "default": "/"
+        },
+        {
+          "type": "text",
+          "id": "link_label_2",
+          "label": "Link Label 2",
+          "default": "Analytics"
+        },
+        {
+          "type": "url",
+          "id": "link_url_2",
+          "label": "Link URL 2",
+          "default": "/"
+        },
+        {
+          "type": "text",
+          "id": "link_label_3",
+          "label": "Link Label 3",
+          "default": "Commerce"
+        },
+        {
+          "type": "url",
+          "id": "link_url_3",
+          "label": "Link URL 3",
+          "default": "/"
+        },
+        {
+          "type": "text",
+          "id": "link_label_4",
+          "label": "Link Label 4",
+          "default": "Insights"
+        },
+        {
+          "type": "url",
+          "id": "link_url_4",
+          "label": "Link URL 4",
+          "default": "/"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Social Icon",
+      "settings": [
+        {
+          "type": "text",
+          "id": "social_icon",
+          "label": "Font Awesome Icon Class",
+          "default": "fab fa-facebook-f"
+        },
+        {
+          "type": "url",
+          "id": "social_link",
+          "label": "Social Link",
+          "default": "/"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Footer",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "link_column"
+        },
+        {
+          "type": "link_column"
+        },
+        {
+          "type": "social"
+        },
+        {
+          "type": "social"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

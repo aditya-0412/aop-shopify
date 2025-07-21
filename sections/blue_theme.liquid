@@ -1,0 +1,122 @@
+<!-- Blue theme section -->
+<section id="blue-theme" class="section-bg-blue py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content Block -->
+      <div class="col-lg-6">
+        {% if section.settings.top_text != blank %}
+          <p class="text-uppercase-custom mb-2">{{ section.settings.top_text }}</p>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h1 class="heading-1-custom mb-4">{{ section.settings.heading }}</h1>
+        {% endif %}
+
+        {% if section.settings.paragraph != blank %}
+          <p class="paragraph-lg-custom mb-4">{{ section.settings.paragraph }}</p>
+        {% endif %}
+
+        {% if section.settings.button_text != blank %}
+          <a href="{{ section.settings.button_link }}" class="btn btn-primary-custom">
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.quote != blank %}
+          <blockquote class="blockquote-custom mt-4">
+            "{{ section.settings.quote }}"
+            {% if section.settings.quote_author != blank %}
+              <footer>{{ section.settings.quote_author }}</footer>
+            {% endif %}
+          </blockquote>
+        {% endif %}
+      </div>
+
+      <!-- Right Image Block -->
+      <div
+        class="col-lg-6 d-flex justify-content-center justify-content-lg-end"
+      >
+        <!-- Placeholder for the image -->
+        {% if section.settings.image %}
+          <img
+            width=""
+            height=""
+            loading="lazy"
+            src="{{ section.settings.image | image_url }}"
+            alt="{{ section.settings.image_alt }}"
+            class="img-fluid image-style-custom"
+          >
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Blue Theme Section",
+  "tag": "section",
+  "class": "custom-blue-theme",
+  "settings": [
+    {
+      "type": "text",
+      "id": "top_text",
+      "label": "Top Text",
+      "default": "Help Your Child Excel"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Explore Subject Specific Support"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Paragraph Text",
+      "default": "Awaken minds and inspire learning with free activities, resources and trials designed to inspire, build confidence and help your home learner thrive."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "EXPLORE NOW"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/"
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote Text",
+      "default": "I love the fact that I have a complete education and that every single subject is focused on Christ. Even my math projects!"
+    },
+    {
+      "type": "text",
+      "id": "quote_author",
+      "label": "Quote Author",
+      "default": "Madeline S., Ignite Christian Academy Student"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Right Side Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image Alt Text",
+      "default": "Learning Illustration"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blue Theme Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
