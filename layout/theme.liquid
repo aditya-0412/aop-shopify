@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} <title>{{ page_title }}</title> {% endcomment %}
+    <title>AOP Homeschooling</title>
+
+    {% render 'fontawesome' %}
+
+    <!-- Bootstrap CSS -->
+    {{ 'bootstrap.cdn.min.css' | asset_url | stylesheet_tag }}
+
+    <!-- Google font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    >
+    <!-- FontAwesome -->
+    {{ 'all.min.css' | asset_url | stylesheet_tag }}
+
+    <!-- Theme Styles -->
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
+    {{ 'main.css' | asset_url | stylesheet_tag }}
+    {{ 'program-cards.css' | asset_url | stylesheet_tag }}
+    {{ 'custom-cards.css' | asset_url | stylesheet_tag }}
+    {{ 'bottom-section.css' | asset_url | stylesheet_tag }}
+    {{ 'footer.css' | asset_url | stylesheet_tag }}
+
+    {{ content_for_header }}
+  </head>
+  <body class="antialiased">
+    {% section 'header' %}
+    {{ content_for_layout }}
+    {% section 'footer' %}
+
+    <!-- Bootstrap JS -->
+    <script src="{{ 'bootstrap.bundle.min.js' | asset_url }}" defer></script>
+  </body>
+</html>

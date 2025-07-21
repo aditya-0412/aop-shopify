@@ -1,0 +1,142 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "contact_text": "Call 1-800-622-3070",
+          "promo_text": "FREE Shipping 20% Off All Products starts 2/2/2022!",
+          "login_text": "LOG IN",
+          "account_text": "My Account",
+          "logo": "shopify://shop_images/aop-logo.jpg",
+          "logo_alt": "AOP Logo",
+          "logo_link": "/",
+          "nav_menu": "main"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "link_column_87PqUE": {
+            "type": "link_column",
+            "settings": {
+              "title": "Solutions",
+              "link_label_1": "Marketing",
+              "link_url_1": "/",
+              "link_label_2": "Analytics",
+              "link_url_2": "/",
+              "link_label_3": "Commerce",
+              "link_url_3": "/",
+              "link_label_4": "Insights",
+              "link_url_4": "/"
+            }
+          },
+          "link_column_4mt6LM": {
+            "type": "link_column",
+            "settings": {
+              "title": "Solutions",
+              "link_label_1": "Marketing",
+              "link_url_1": "/",
+              "link_label_2": "Analytics",
+              "link_url_2": "/",
+              "link_label_3": "Commerce",
+              "link_url_3": "/",
+              "link_label_4": "Insights",
+              "link_url_4": "/"
+            }
+          },
+          "link_column_KfbTGV": {
+            "type": "link_column",
+            "settings": {
+              "title": "Solutions",
+              "link_label_1": "Marketing",
+              "link_url_1": "/",
+              "link_label_2": "Analytics",
+              "link_url_2": "/",
+              "link_label_3": "Commerce",
+              "link_url_3": "/",
+              "link_label_4": "Insights",
+              "link_url_4": "/"
+            }
+          },
+          "link_column_qxY9La": {
+            "type": "link_column",
+            "settings": {
+              "title": "Solutions",
+              "link_label_1": "Marketing",
+              "link_url_1": "/",
+              "link_label_2": "Analytics",
+              "link_url_2": "/",
+              "link_label_3": "Commerce",
+              "link_url_3": "/",
+              "link_label_4": "Insights",
+              "link_url_4": "/"
+            }
+          },
+          "social_eRHRWB": {
+            "type": "social",
+            "settings": {
+              "social_icon": "fab fa-facebook",
+              "social_link": "/"
+            }
+          },
+          "social_6YkHJX": {
+            "type": "social",
+            "settings": {
+              "social_icon": "fab fa-instagram",
+              "social_link": "https://www.google.com"
+            }
+          },
+          "social_3y89Ni": {
+            "type": "social",
+            "settings": {
+              "social_icon": "fab fa-twitter",
+              "social_link": "/"
+            }
+          },
+          "social_4AWxpK": {
+            "type": "social",
+            "settings": {
+              "social_icon": "fab fa-github",
+              "social_link": "/"
+            }
+          },
+          "social_mwnaeB": {
+            "type": "social",
+            "settings": {
+              "social_icon": "fab fa-dribbble",
+              "social_link": "/"
+            }
+          }
+        },
+        "block_order": [
+          "link_column_87PqUE",
+          "link_column_4mt6LM",
+          "link_column_KfbTGV",
+          "link_column_qxY9La",
+          "social_eRHRWB",
+          "social_6YkHJX",
+          "social_3y89Ni",
+          "social_4AWxpK",
+          "social_mwnaeB"
+        ],
+        "settings": {
+          "about_title": "About AOP Lorem Ipsum",
+          "about_text": "The latest homeschool news, articles, and resources, sent to your inbox weekly.",
+          "bottom_text": "Eget consectetur nunc turpis risus. Links.",
+          "sticky_button_label": "Sticky Contact Widget"
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}

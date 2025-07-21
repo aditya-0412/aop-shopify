@@ -1,0 +1,135 @@
+<!-- Top Bar -->
+<div
+  class="top-bar text-white small py-2 px-4 d-flex flex-wrap justify-content-between align-items-center"
+>
+  <!-- Left: Contact Info -->
+  <div class="d-flex align-items-center gap-2">
+    <span>{{ section.settings.contact_text }}</span>
+    <i class="fa-solid fa-message"></i>
+  </div>
+
+  <!-- Center: Promo Message -->
+  <div class="text-center flex-grow-1">
+    <span class="d-none d-md-inline">{{ section.settings.promo_text }}</span>
+  </div>
+
+  <!-- Right: Account Info -->
+  <div class="d-flex align-items-center gap-4">
+    <span>
+      {{- section.settings.login_text -}}
+      <i class="fas fa-angle-down"></i>
+    </span>
+    <span>
+      {{- section.settings.account_text -}}
+      <i class="fas fa-angle-down"></i>
+    </span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-light shadow-sm py-2">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img
+        src="{{ section.settings.logo | image_url }}"
+        alt="{{ section.settings.logo_alt }}"
+        width="100px"
+        height="50px"
+      >
+    </a>
+
+    <div class="d-flex order-md-1 gap-3">
+      <!-- Search & Cart -->
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-link text-secondary me-2">
+          <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+        </button>
+        <button class="btn btn-link text-secondary p-0">
+          <i class="fa-solid fa-cart-shopping fa-lg"></i>
+        </button>
+        {{ cart.item_count }}
+      </div>
+      <button
+        class="navbar-toggler ms-auto"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse order-md-0" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        {% for link in linklists[section.settings.nav_menu].links %}
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Custom Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "contact_text",
+      "label": "Contact Info Text",
+      "default": "Call 1-800-622-3070"
+    },
+    {
+      "type": "text",
+      "id": "promo_text",
+      "label": "Promo Message",
+      "default": "FREE Shipping 20% Off All Products starts 2/2/2022!"
+    },
+    {
+      "type": "text",
+      "id": "login_text",
+      "label": "Login Text",
+      "default": "LOG IN"
+    },
+    {
+      "type": "text",
+      "id": "account_text",
+      "label": "My Account Text",
+      "default": "My Account"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo Image"
+    },
+    {
+      "type": "text",
+      "id": "logo_alt",
+      "label": "Logo Alt Text",
+      "default": "AOP Logo"
+    },
+    {
+      "type": "url",
+      "id": "logo_link",
+      "label": "Logo Link",
+      "default": "/"
+    },
+    {
+      "type": "link_list",
+      "id": "nav_menu",
+      "label": "Navigation Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header",
+      "category": "Header"
+    }
+  ]
+}
+{% endschema %}

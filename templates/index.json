@@ -1,0 +1,251 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "background_image": "shopify://shop_images/hero-background.png",
+        "heading": "Build Confidence<br>And Character At Home",
+        "subheading": "Find your family's home learning solution & get 15% off in May.",
+        "button_text": "GET STARTED",
+        "button_link": "/"
+      }
+    },
+    "program_cards": {
+      "type": "program_cards",
+      "blocks": {
+        "program_card_dUG6h3": {
+          "type": "program_card",
+          "settings": {
+            "title": "Monarch",
+            "grade": "Grades 3-12",
+            "icon_class": "fas fa-laptop",
+            "card_style": "monarch"
+          }
+        },
+        "program_card_FV6Hxa": {
+          "type": "program_card",
+          "settings": {
+            "title": "Lifepac",
+            "grade": "Grades K-12",
+            "icon_class": "fas fa-book-open",
+            "card_style": "lifepac"
+          }
+        },
+        "program_card_F33p8z": {
+          "type": "program_card",
+          "settings": {
+            "title": "Horizons",
+            "grade": "Grades PreK-12",
+            "icon_class": "fas fa-book",
+            "card_style": "horizons"
+          }
+        },
+        "program_card_xy6AdL": {
+          "type": "program_card",
+          "settings": {
+            "title": "Academy",
+            "grade": "Grades PreK-12",
+            "icon_class": "fas fa-desktop",
+            "card_style": "academy"
+          }
+        }
+      },
+      "block_order": [
+        "program_card_dUG6h3",
+        "program_card_FV6Hxa",
+        "program_card_F33p8z",
+        "program_card_xy6AdL"
+      ],
+      "settings": {}
+    },
+    "cards": {
+      "type": "cards",
+      "blocks": {
+        "card_wbBczr": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/monarch-bg.png",
+            "logo": "shopify://shop_images/monarch.png",
+            "logo_alt": "Program Logo",
+            "header_class": "header-monarch",
+            "overlay_class": "monarch-overlay",
+            "badge1": "Online",
+            "badge1_icon": "fas fa-desktop",
+            "badge2": "Grades 3-12",
+            "title": "Online, Parent-Supported",
+            "text": "Online Christian home learning curriculum with automated grading and record keeping.",
+            "button1_text": "Learn More",
+            "button1_link": "/",
+            "button2_text": "FREE TRIAL",
+            "button2_link": "/",
+            "button2_class": "btn-custom-monarch"
+          }
+        },
+        "card_YH6GEd": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/lifepac-bg.png",
+            "logo": "shopify://shop_images/lifepac.png",
+            "logo_alt": "Program Logo",
+            "header_class": "header-monarch",
+            "overlay_class": "lifepac-overlay",
+            "badge1": "Print",
+            "badge1_icon": "fas fa-book-open",
+            "badge2": "Grades K-12",
+            "title": "Print, Mastery Learning",
+            "text": "Parent-supported complete grade sets or individual courses that instill independence.",
+            "button1_text": "Learn More",
+            "button1_link": "/",
+            "button2_text": "15% OFF SALE",
+            "button2_link": "/",
+            "button2_class": "btn-custom-lifepac"
+          }
+        },
+        "card_QgH6ze": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/horizons-bg.png",
+            "logo": "shopify://shop_images/horizons.png",
+            "logo_alt": "Program Logo",
+            "header_class": "header-monarch",
+            "overlay_class": "horizons-overlay",
+            "badge1": "Print",
+            "badge1_icon": "fas fa-book-open",
+            "badge2": "Grades Pre-12",
+            "title": "Print, Spiral Learning",
+            "text": "Parent-supported workbooks to help kids excel where they have not mastered concepts.",
+            "button1_text": "Learn More",
+            "button1_link": "/",
+            "button2_text": "15% OFF SALE",
+            "button2_link": "/",
+            "button2_class": "btn-custom-horizons"
+          }
+        },
+        "card_YGAFig": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/ignite-bg.jpg",
+            "logo": "shopify://shop_images/ignite.png",
+            "logo_alt": "Program Logo",
+            "header_class": "header-monarch",
+            "overlay_class": "ignite-overlay",
+            "badge1": "Online",
+            "badge1_icon": "fas fa-desktop",
+            "badge2": "Grades PreK-12",
+            "title": "Online, Teacher & Tutor Supported",
+            "text": "Fully accredited online Christian Academy complete with student engagement activities.",
+            "button1_text": "Learn More",
+            "button1_link": "/",
+            "button2_text": "GET HELP",
+            "button2_link": "/",
+            "button2_class": "btn-custom-ignite"
+          }
+        },
+        "card_XFixzj": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/robotify-bg.png",
+            "logo": "shopify://shop_images/robotify.png",
+            "logo_alt": "Program Logo",
+            "header_class": "header-monarch",
+            "overlay_class": "robotify-overlay",
+            "badge1": "Online",
+            "badge1_icon": "fas fa-desktop",
+            "badge2": "Grades 3-12",
+            "title": "800+ Gamified Coding Activities",
+            "text": "Access 100+ hours of robotics, STEM and programming courses in this Monarch elective.",
+            "button1_text": "Learn More",
+            "button1_link": "/",
+            "button2_text": "FREE TRIAL",
+            "button2_link": "/",
+            "button2_class": "btn-custom-robotify"
+          }
+        },
+        "card_HH8Axf": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/side-image-2.png",
+            "logo_alt": "Program Logo",
+            "header_class": "header-extra",
+            "overlay_class": "extra-overlay",
+            "badge1": "",
+            "badge1_icon": "",
+            "badge2": "",
+            "title": "We're Here To Help",
+            "text": "Our home learning experts can help you decide which option is best for your families' needs.",
+            "button1_text": "Learn More",
+            "button1_link": "/",
+            "button2_text": "GET HELP",
+            "button2_link": "/",
+            "button2_class": "btn-custom-extra"
+          }
+        }
+      },
+      "block_order": [
+        "card_wbBczr",
+        "card_YH6GEd",
+        "card_QgH6ze",
+        "card_YGAFig",
+        "card_XFixzj",
+        "card_HH8Axf"
+      ],
+      "settings": {}
+    },
+    "blue_theme": {
+      "type": "blue_theme",
+      "settings": {
+        "top_text": "Help Your Child Excel",
+        "heading": "Explore Subject Specific Support",
+        "paragraph": "Awaken minds and inspire learning with free activities, resources and trials designed to inspire, build confidence and help your home learner thrive.",
+        "button_text": "EXPLORE NOW",
+        "button_link": "/",
+        "quote": "I love the fact that I have a complete education and that every single subject is focused on Christ. Even my math projects!",
+        "quote_author": "Madeline S., Ignite Christian Academy Student",
+        "image": "shopify://shop_images/side-image.png",
+        "image_alt": "Learning Illustration"
+      }
+    },
+    "bottom": {
+      "type": "bottom",
+      "settings": {
+        "video_url": "https://www.youtube.com/embed/LD8pokENoLg",
+        "right_top_text": "Join the Home Learning Community",
+        "right_heading": "Curious If Home Learning Is Right For You?",
+        "right_paragraph": "Explore moments of connection with real AOP families to hear the highlights and obstacles from their home learning journeys or schedule a call with one of our friendly and helpful home-learning experts to get your questions answered!",
+        "right_button_text": "GET STARTED",
+        "right_button_link": "/",
+        "bottom_heading": "Getting Started With Home Learning Is Easier Than You Think",
+        "bottom_paragraph": "Browse curriculum and resources designed with home learners in mind and subscribe to receive home learning help to your inbox for support along the way.",
+        "bottom_button1_text": "DOWNLOAD CATALOG",
+        "bottom_button1_link": "/",
+        "bottom_button2_text": "SUBSCRIBE FOR HELPFUL TIPS",
+        "bottom_button2_link": "/"
+      }
+    },
+    "brand_logo": {
+      "type": "brand_logo",
+      "settings": {
+        "text": "AOP has been the leader in award-winning, Christian homeschooling for 45 years counting!",
+        "logo_image": "shopify://shop_images/brands-logo.png",
+        "logo_alt": "Brands Logo"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "program_cards",
+    "cards",
+    "blue_theme",
+    "bottom",
+    "brand_logo"
+  ]
+}
